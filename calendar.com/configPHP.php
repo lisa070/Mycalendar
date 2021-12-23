@@ -13,7 +13,6 @@ if (!$db) {
 if (!mysqli_select_db($db, DB_NAME)) {
     exit('Wrong database');
 }
-mysqli_query("SET NAMES UTF8");
 
 return $db;
 
