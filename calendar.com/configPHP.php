@@ -6,12 +6,14 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'eventall');
 
 
-$db = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+$db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
 if (!$db) {
     exit('No connection with database');
 }
-if (!mysql_select_db(DB_NAME, $db)) {
+if (!mysqli_select_db($db, DB_NAME)) {
     exit('Wrong database');
 }
-mysql_query("SET NAMES UTF8");
+mysqli_query("SET NAMES UTF8");
+
+return $db;
 

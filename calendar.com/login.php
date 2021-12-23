@@ -1,8 +1,6 @@
 <?php
 header("Content-Type:text/html;charset=UTF8");
-mysql_query("SET NAMES UTF8");
-mysql_query("SET CHARACTER SET UTF8");
-include 'configPHP.php';
+require_once 'configPHP.php';
 include 'function.php';
 
 if (filter_input(INPUT_POST, 'param')) {
@@ -43,11 +41,11 @@ if (filter_input(INPUT_POST, 'id')) {
         <div id="form">
             <div class="form-1" >
                 <p class="field">
-                    <input id="log" type="text" name="login" placeholder="Логин или емэйл" value="user name">
+                    <input id="log" type="text" name="login" placeholder="Логин или емэйл">
                     <i class="icon-user icon-large"></i>
                 </p>
                 <p class="field">
-                    <input id="psw" type="password" name="password" placeholder="Пароль" value="password">
+                    <input id="psw" type="password" name="password" placeholder="Пароль">
                     <i class="icon-lock icon-large"></i>
                 </p>      
                 <p class="submit">

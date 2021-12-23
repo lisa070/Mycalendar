@@ -1,8 +1,6 @@
 <?php
 header("Content-Type:text/html;charset=UTF8");
-mysql_query("SET NAMES UTF8");
-mysql_query("SET CHARACTER SET UTF8");
-include 'configPHP.php';
+require_once 'configPHP.php';
 include 'function.php';
 
 if(filter_input(INPUT_POST, 'param')) {
@@ -79,7 +77,7 @@ if(filter_input(INPUT_POST, 'id')) {
             const inform = (
                 <div>
                     <div id="info"></div>
-                    <div id="fon" class="close"></div>
+                    <div id="fon" className="close"></div>
                 </div>
             ); 
             
@@ -89,7 +87,7 @@ if(filter_input(INPUT_POST, 'id')) {
                     <div><a href="https://vk.com/studiogos"><img src="photo.png" alt="icon1" align="left" height="60"/> Фото- и видеоотчёты</a></div>
                     <div><a href="http://yourplus.ru/irk/"><img src="plus.png" alt="icon2" align="left" height="60"/> Портал "Твой Плюс"</a></div>
                     <div><a href="https://isu.ru/ru/index.html"><img src="logo.png" alt="icon3" align="left" height="60"/> Сайт ИГУ</a></div>
-                    <div><a href="URL"><img src="login.png" alt="icon4" align="left" height="60"/> Вход</a></div>
+                    <div><a href="/login.php"><img src="login.png" alt="icon4" align="left" height="60"/> Вход</a></div>
                 </div>
             );
     
