@@ -1,6 +1,6 @@
 <?php
 header("Content-Type:text/html;charset=UTF8");
-require_once 'configPHP.php';
+include 'configPHP.php';
 include 'function.php';
 
 if(filter_input(INPUT_POST, 'param')) {

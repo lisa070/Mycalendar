@@ -1,7 +1,5 @@
 <?php
 
-$db = require( "configPHP.php" );
-
 function get_event($data) {
     global $db;
 
